@@ -88,7 +88,7 @@ describe("users", () => {
   });
 });
 
-describe("channels", () => {
+describe.only("channels", () => {
   describe("#create", () => {
     const params = { name: "" };
 
