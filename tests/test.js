@@ -88,7 +88,7 @@ describe("users", () => {
   });
 });
 
-describe.only("channels", () => {
+describe("channels", () => {
   describe("#create", () => {
     const params = { name: "" };
 
@@ -179,7 +179,7 @@ describe("channel_messages", () => {
 
     it("creates a message", () =>
       models.channelMessages
-        .create({ fromId, channelId, message })
+        .create({ fromId, channelId, message }) // param => { fromId, channelId, message }
         .then((messages) => {
           expect(messages[0]).to.include({
             fromUser: "rp-3",

@@ -9,7 +9,7 @@ To roll back the migrations you just ran, you can use `knex migrate:rollback`
 exports.up = function(knex, Promise) {
   // create the 'users' table with three columns
   return knex.schema.createTable("users", (t) => {
-    t.increments() // auto-incrementing id column
+    t.increments("id") // auto-incrementing id column
       .index(); // index this column
 
     t.string("username", 15) // maximum length of 15 characters

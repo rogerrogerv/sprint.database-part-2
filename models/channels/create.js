@@ -24,7 +24,7 @@ module.exports = (knex, Channel) => {
           error.message.match("duplicate key value") ||
           error.message.match("Unique constraint failed")
         )
-          return Promise.reject(new Error("That channel name already exists"));
+          return Promise.reject(new Error("That channel already exists"));
         return Promise.reject(error);
       });
   };
